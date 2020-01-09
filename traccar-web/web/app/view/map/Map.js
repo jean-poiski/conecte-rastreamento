@@ -27,8 +27,10 @@ Ext.define('Traccar.view.map.Map', {
     controller: 'map',
 
     title: Strings.mapTitle,
-    tbar: {
+
+    rbar: {
         componentCls: 'toolbar-header-style',
+        frame: true,
         defaults: {
             xtype: 'button',
             tooltipType: 'title',
@@ -39,12 +41,6 @@ Ext.define('Traccar.view.map.Map', {
             }
         },
         items: [{
-            xtype: 'tbtext',
-            html: Strings.mapTitle,
-            baseCls: 'x-panel-header-title-default'
-        }, {
-            xtype: 'tbfill'
-        }, {
             handler: 'showReports',
             reference: 'showReportsButton',
             glyph: 'xf0f6@FontAwesome',

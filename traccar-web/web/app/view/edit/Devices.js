@@ -35,6 +35,8 @@ Ext.define('Traccar.view.edit.Devices', {
 
     title: Strings.deviceTitle,
 
+    maxHeight: '50%',
+
     tbar: {
         componentCls: 'toolbar-header-style',
         defaults: {

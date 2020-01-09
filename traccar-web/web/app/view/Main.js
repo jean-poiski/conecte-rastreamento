@@ -56,13 +56,24 @@ Ext.define('Traccar.view.Main', {
         },
 
         items: [{
-            title: Strings.deviceTitle,
-            xtype: 'devicesView',
-            reference: 'devicesView'
-        }, {
-            title: Strings.stateTitle,
-            xtype: 'stateView',
-            reference: 'stateView'
+            xtype: 'panel',
+            type: 'vbox',
+            title: Strings.devicesAndState,
+            items: [{
+                maxHeight: '250',
+                region: 'center',
+                flex: 1,
+                title: Strings.deviceTitle,
+                xtype: 'devicesView',
+                reference: 'devicesView'
+            }, {
+                region: 'bottom',
+                title: Strings.stateTitle,
+                flex: 2,
+                heigth: '30%',
+                xtype: 'stateView',
+                reference: 'stateView'
+            }]
         }, {
             xtype: 'eventsView',
             reference: 'eventsView'

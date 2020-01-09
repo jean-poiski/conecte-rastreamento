@@ -44,7 +44,7 @@ Ext.define('Traccar.view.dialog.Login', {
             src: 'logo.svg',
             alt: Strings.loginLogo,
             width: 240,
-            height: 64,
+            height: 164,
             style: {
                 display: 'block',
                 margin: '10px auto 25px'
@@ -102,10 +102,6 @@ Ext.define('Traccar.view.dialog.Login', {
     },
 
     buttons: [{
-        text: Strings.loginRegister,
-        handler: 'onRegisterClick',
-        reference: 'registerButton'
-    }, {
         text: Strings.loginLogin,
         handler: 'onLoginClick'
     }]

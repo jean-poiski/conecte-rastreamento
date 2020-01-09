@@ -1,3 +1,4 @@
+/* eslint-disable max-statements */
 (function () {
     var debugMode, touchMode, locale, localeParameter, extjsVersion, proj4jsVersion, olVersion, i, language, languages, languageDefault;
 
@@ -160,8 +161,14 @@
     }
     addScriptFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/locale/locale-' + locale.languages[locale.language].code + '.js');
 
-    addStyleFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/theme-triton/resources/theme-triton-all.css');
-    addScriptFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/theme-triton/theme-triton.js');
+    //addStyleFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/theme-triton/resources/theme-triton-all.css');
+    //addScriptFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/theme-triton/theme-triton.js');
+
+    addStyleFile('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    addStyleFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/theme-aria/resources/theme-aria-all.css');
+    addScriptFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/classic/theme-aria/theme-aria.js');
+
 
     addStyleFile('https://cdnjs.cloudflare.com/ajax/libs/extjs/' + extjsVersion + '/packages/charts/classic/triton/resources/charts-all.css');
 

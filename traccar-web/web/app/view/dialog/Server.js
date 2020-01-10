@@ -93,7 +93,7 @@ Ext.define('Traccar.view.dialog.Server', {
             xtype: 'fieldset',
             title: Strings.sharedPermissions,
             collapsible: true,
-            collapsed: true,
+            collapsed: false,
             items: [{
                 xtype: 'checkboxfield',
                 inputValue: true,

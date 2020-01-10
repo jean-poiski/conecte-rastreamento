@@ -17,8 +17,12 @@
     background-color: #333333 !important;
 }*/
 
+* {
+    font-size: 12px !important;    
+}
+
 body {
-    background-image: url('fundologin.jfif') !important;
+    background-image: url('fundologin.jfif') !important; 
 }
 
 body.x-border-layout-ct, div.x-border-layout-ct {
@@ -27,6 +31,12 @@ body.x-border-layout-ct, div.x-border-layout-ct {
 
 .x-fieldset {
     overflow: visible !important; /* workaround for Safari issue */
+}
+
+.clear-combo.clear-combo-default:before {
+    content: '\f00d';
+    font-family: 'FontAwesome' !important;
+    background-image: unset !important;
 }
 
 #attribution {

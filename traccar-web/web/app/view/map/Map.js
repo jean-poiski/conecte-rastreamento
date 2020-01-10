@@ -27,10 +27,8 @@ Ext.define('Traccar.view.map.Map', {
     controller: 'map',
 
     title: Strings.mapTitle,
-
     rbar: {
         componentCls: 'toolbar-header-style',
-        frame: true,
         defaults: {
             xtype: 'button',
             tooltipType: 'title',

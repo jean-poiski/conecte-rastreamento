@@ -22,7 +22,7 @@ Ext.define('Traccar.view.ClearableComboBox', {
     editable: false,
     triggers: {
         clear: {
-            cls: 'iconCls: x-fa fa-times',
+            cls: 'clear-combo',
             handler: function (button) {
                 button.clearValue();
             }

@@ -93,5 +93,24 @@ Ext.define('Traccar.view.map.MapController', {
 
     zoomToAllDevices: function () {
         this.zoomToAllPositions(Ext.getStore('LatestPositions').getData().items);
+    },
+
+    onNotificationsClick: function () {
+        Ext.create('Traccar.view.BaseWindow', {
+            title: Strings.sharedNotifications,
+            items: {
+                xtype: 'notificationsView'
+            }
+        }).show();
+    },
+
+    onUserClick: function () {
+        var dialog = Ext.create('Traccar.view.dialog.User', {
+            selfEdit: true
+        });
+        dialog.down('form').loadRecord(Traccar.app.getUser());
+        dialog.lookupReference('testNotificationButton').setHidden(false);
+        dialog.show();
     }
+
 });

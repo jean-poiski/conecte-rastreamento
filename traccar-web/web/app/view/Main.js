@@ -41,7 +41,14 @@ Ext.define('Traccar.view.Main', {
     items: [{
         region: 'west',
         xtype: 'panel',
-        layout: 'accordion',
+        layout: {
+            type: 'accordion',
+            animate: true,
+            activeOnTop: true,
+            vertical: true,
+            fill: true,
+            align: 'stretch'
+        },
         width: Traccar.Style.deviceWidth,
         title: 'Painel de Gerenciamento',
         floatable: true,
@@ -51,26 +58,26 @@ Ext.define('Traccar.view.Main', {
         componentCls: 'toolbar-header-style',
 
         defaults: {
-            header: true,
-            flex: 1
+            header: true
         },
 
         items: [{
             xtype: 'panel',
-            type: 'vbox',
+            layout: {
+                type: 'vbox',
+                vertical: true,
+                fill: true,
+                align: 'stretch'
+            },
             title: Strings.devicesAndState,
             items: [{
-                maxHeight: '250',
-                region: 'center',
-                flex: 1,
+                flex: 3,
                 title: Strings.deviceTitle,
                 xtype: 'devicesView',
                 reference: 'devicesView'
             }, {
-                region: 'bottom',
                 title: Strings.stateTitle,
-                flex: 2,
-                heigth: '30%',
+                flex: 5,
                 xtype: 'stateView',
                 reference: 'stateView'
             }]

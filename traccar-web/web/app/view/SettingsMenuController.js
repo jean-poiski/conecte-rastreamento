@@ -51,10 +51,8 @@ Ext.define('Traccar.view.SettingsMenuController', {
             this.lookupReference('settingsUsersButton').setHidden(false);
         }
         if (admin || !readonly) {
-            this.lookupReference('settingsUserButton').setHidden(false);
             this.lookupReference('settingsGroupsButton').setHidden(false);
             this.lookupReference('settingsGeofencesButton').setHidden(false);
-            this.lookupReference('settingsNotificationsButton').setHidden(false);
             this.lookupReference('settingsCalendarsButton').setHidden(
                 Traccar.app.getBooleanAttributePreference('ui.disableCalendars'));
             this.lookupReference('settingsDriversButton').setHidden(
@@ -65,13 +63,13 @@ Ext.define('Traccar.view.SettingsMenuController', {
         }
     },
 
-    onUserClick: function () {
-        var dialog = Ext.create('Traccar.view.dialog.User', {
-            selfEdit: true
-        });
-        dialog.down('form').loadRecord(Traccar.app.getUser());
-        dialog.lookupReference('testNotificationButton').setHidden(false);
-        dialog.show();
+    onUsersClick: function () {
+        Ext.create('Traccar.view.BaseWindow', {
+            title: Strings.settingsUsers,
+            items: {
+                xtype: 'usersView'
+            }
+        }).show();
     },
 
     onGroupsClick: function () {
@@ -96,24 +94,6 @@ Ext.define('Traccar.view.SettingsMenuController', {
         var dialog = Ext.create('Traccar.view.dialog.Server');
         dialog.down('form').loadRecord(Traccar.app.getServer());
         dialog.show();
-    },
-
-    onUsersClick: function () {
-        Ext.create('Traccar.view.BaseWindow', {
-            title: Strings.settingsUsers,
-            items: {
-                xtype: 'usersView'
-            }
-        }).show();
-    },
-
-    onNotificationsClick: function () {
-        Ext.create('Traccar.view.BaseWindow', {
-            title: Strings.sharedNotifications,
-            items: {
-                xtype: 'notificationsView'
-            }
-        }).show();
     },
 
     onComputedAttributesClick: function () {

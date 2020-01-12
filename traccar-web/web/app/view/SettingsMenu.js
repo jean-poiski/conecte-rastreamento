@@ -32,12 +32,6 @@ Ext.define('Traccar.view.SettingsMenu', {
 
         items: [{
             hidden: true,
-            text: Strings.settingsUser,
-            glyph: 'xf007@FontAwesome',
-            handler: 'onUserClick',
-            reference: 'settingsUserButton'
-        }, {
-            hidden: true,
             text: Strings.settingsGroups,
             glyph: 'xf247@FontAwesome',
             handler: 'onGroupsClick',
@@ -66,12 +60,6 @@ Ext.define('Traccar.view.SettingsMenu', {
             glyph: 'xf0c0@FontAwesome',
             handler: 'onUsersClick',
             reference: 'settingsUsersButton'
-        }, {
-            hidden: true,
-            text: Strings.sharedNotifications,
-            glyph: 'xf003@FontAwesome',
-            handler: 'onNotificationsClick',
-            reference: 'settingsNotificationsButton'
         }, {
             hidden: true,
             text: Strings.sharedComputedAttributes,

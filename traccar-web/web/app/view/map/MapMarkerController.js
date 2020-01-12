@@ -80,6 +80,8 @@ Ext.define('Traccar.view.map.MapMarkerController', {
         this.liveRoutes = {};
         this.liveRouteLength = Traccar.app.getAttributePreference('web.liveRouteLength', 10);
         this.selectZoom = Traccar.app.getAttributePreference('web.selectZoom', 0);
+
+        this.defaultZoomDevice = 16;
     },
 
     getAreaStyle: function (label, color) {
@@ -504,9 +506,7 @@ Ext.define('Traccar.view.map.MapMarkerController', {
             marker.changed();
             if (center) {
                 this.getView().getMapView().setCenter(marker.getGeometry().getCoordinates());
-                if (this.selectZoom !== 0 && this.selectZoom > this.getView().getMapView().getZoom()) {
-                    this.getView().getMapView().setZoom(this.selectZoom);
-                }
+                this.getView().getMapView().setZoom(this.defaultZoomDevice);
             }
         }
 
